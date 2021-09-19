@@ -146,7 +146,17 @@ function updateUI(){
 
         if(item.topping) $('#shoppingCart ul.list-group li:last div.details')
             .append(" Topping:"+item.topping.map(topping=>topping.name).join(','));
-        
+
     }
+    $('.checkoutBtn').each(function(){
+        if(cart.cartItems.length > 0)
+            $(this).removeAttr('disabled');
+        else $(this).attr('disabled', true);
+    });
+
+    $('.subTotal').html(subTotalPrice);
+    $('#totalPrice').html(subTotalPrice + (cart.delivery ? cart.delivery.price : 0));
+
 }
-        }
+}
+

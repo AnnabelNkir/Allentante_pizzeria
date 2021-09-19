@@ -156,7 +156,47 @@ function updateUI(){
 
     $('.subTotal').html(subTotalPrice);
     $('#totalPrice').html(subTotalPrice + (cart.delivery ? cart.delivery.price : 0));
+  /* Populating pizza list */
+  
+  const pizzaListDiv = $('#pizzalisting');
+  let pizzaItems = '';
 
+  for (let i = 0; i < pizzaListing.length; i++) {
+      let pizzaItem = pizzaListing[i];
+
+      pizzaItems += `<div class="col-md-4 p-3">
+      <div class="card" style="width: 18rem;">
+      <div class="pizzaImage">
+      <img src="./images/p2.jpeg"${pizzaItem.image}" class="card-img-top" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">`+ pizzaItem.name + `</h5>
+        <p class="card-text">`+ pizzaItem.description + `</p>
+        <a href="#" data-index="`+ i + `" 
+          class="btn btn-primary orderBtn"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#pizzaCustomization"
+          aria-controls="offcanvasBottom">Order</a>
+      </div>
+    </div>
+      </div>`;
+      pizzaItem = undefined;
+  }
+
+  pizzaListDiv.html(pizzaItems);
+  pizzaListDiv.find('a.orderBtn').each(function () {
+      $(this).on('click', function () {
+          let pizzaIndex = $(this).data('index');
+          selectedPizza = pizzaListing[pizzaIndex];
+          $('#pizzaCustomization img').attr('src', './images/p4.jpeg' + selectedPizza.image);
+          
+          $('select#size').val('');
+          $('select#toppings').val('');
+          $('select#crust').val('');
+          $('#pizzaPrice').html('');
+      });
+  });
+  /* end of Populating pizza list */
 }
 }
 

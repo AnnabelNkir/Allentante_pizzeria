@@ -15,9 +15,10 @@ crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <body>
     <!-- Navigation bar -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Order Pizza</a>
+            <a class="navbar-brand" href="#">Welcome to Allentante Pizzeria</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,24 +26,33 @@ crossorigin="anonymous"></script>
             </button>
         </div>
     </nav>
-    <!-- Shopping cart -->
+
+    
+      <!-- End of navbar -->
+
+       
+
     <div class="container">
+
         <div class="p-3">
             <button type="button" class="btn" id="shoppingCartBtn">
                 <span>Shopping Cart</span>
                 <span class="badge bg-secondary" id="cartItems">0</span>
             </button>
-            <span class="badge bg-warning text-dark subTotal">0</span>
+            <span class="badge bg-warning text-light subTotal">0</span>
             <button disabled class="btn btn-primary btn-sm checkoutBtn">Checkout</button>
         </div>
-        <div id="shoppingCart" class="shadow rounded border border-light bg-white">
-            <h3 class="p-3">Shopping Cart</h3>
+
+       <!-- Beginning of the shoppingcart -->
+
+    <div id="shoppingCart" class="shadow rounded border border-light bg-white">
+            <h3 class="p-5">Shopping Cart</h3>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item cartItem">
                     <div class="row">
                         <div class="col-2">
                             <div style="height: 50px; overflow: hidden;">
-                                <img src="./images/p2.jpeg" style="width: 100%;" alt="">
+                                <img src="./images/pizza8.jpeg" style="width: 100%;" alt="">
                             </div>
                         </div>
                         <div class="col-4">
@@ -62,7 +72,7 @@ crossorigin="anonymous"></script>
 
             <div class="p-3">
                 <h4>Checkout Details</h4>
-                <h5>Delivery Details</h5>
+                <h4>Delivery Details</h4>
                 <Select class="form-control" id="deliveryZones">
                     <option value="">Pick up</option>
                 </Select>
@@ -77,11 +87,15 @@ crossorigin="anonymous"></script>
             </div>
 
         </div>
-        <!-- End of the shopping cart -->
-        <div id="pizzaListing" class="row">
-        Allentante pizzeria flavors
+        <!-- end of the shoppingcart -->
+
+        <div id="pizzalisting" class="row">
+            list of pizza
         </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="pizzaCustomization" aria-labelledby="pizzaNameDiv">
+
+
+        <!-- beginning of the offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="pizzaCustomazation" aria-labelledby="pizzaNameDiv">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="pizzaNameDiv">Offcanvas bottom</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
@@ -90,8 +104,16 @@ crossorigin="anonymous"></script>
             <div class="offcanvas-body small">
 
                 <div class="pizzaImage">
-                    <img src="" alt="" width="100%">
+                    <img src="./images/pizza1.jpeg" alt="" width="100%">
                 </div>
+                <div class="modal-body">
+                    <form id="pizza-one-form">
+                      <label>
+                        Quantity:
+                        <input type="number" class="form-control" id="pizza-quantity" min="1" required>
+                      </label>
+                      <br>
+                      <label>
 
                 <div class="form-group mb-3">
                     <label for="size">Size</label>
@@ -111,32 +133,26 @@ crossorigin="anonymous"></script>
                     <div id="toppings">
 
                     </div>
-                    
+                    <!-- <label for="toppings">Toppings</label>
+                    <select name="toppings" id="toppings" class="form-control" id="">
+                        <option value="">Select Toppings</option>
+                    </select> -->
                 </div>
 
                 <div class="form-group d-flex justify-content-between">
                     <h4 id="pizzaPrice"></h4>
                     <div>
                         <button disabled class="btn btn-warning" id="addToCartBtn" data-bs-toggle="offcanvas"
-                            data-bs-target="#pizzaCustomization" aria-controls="offcanvasBottom">Add to cart</button>
+                            data-bs-target="#pizzaCustomazation" aria-controls="offcanvasBottom">Add to cart</button>
                     </div>
                 </div>
 
 
             </div>
         </div>
+        <!-- end of the offcanvas -->
+    </div>
 
-        
-<div class="textbox">
-    <h1>ALLENTANTE PIZZERIA</h1>
-    <p>A slice is never enough! Welcome to <strong>Allentante pizzeria </strong>tantalizing experience where our sumptuous pizzas leave your taste buds craving for more!</p>
-    <button> One is never enough!!!</button>
-
-
-       
-     
-           
-    </div> 
   <script src="./js/script.js"></script>
 </body>
 </html>

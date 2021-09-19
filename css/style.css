@@ -12,14 +12,6 @@ body{
     text-align: center;
     position: relative;
 }
-nav{
-    width: 85%;
-    margin: auto;
-    padding-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    }
 
 
 .pizzaImg{
@@ -34,6 +26,7 @@ nav{
     height: 150px; 
     overflow: hidden;
 }
+
 
 .textbox{
 width: 60%;

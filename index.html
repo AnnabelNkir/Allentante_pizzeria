@@ -14,6 +14,7 @@ integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2TH
 crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Order Pizza</a>
@@ -24,6 +25,7 @@ crossorigin="anonymous"></script>
             </button>
         </div>
     </nav>
+    <!-- Shopping cart -->
     <div class="container">
         <div class="p-3">
             <button type="button" class="btn" id="shoppingCartBtn">
@@ -33,12 +35,53 @@ crossorigin="anonymous"></script>
             <span class="badge bg-warning text-dark subTotal">0</span>
             <button disabled class="btn btn-primary btn-sm checkoutBtn">Checkout</button>
         </div>
+        <div id="shoppingCart" class="shadow rounded border border-light bg-white">
+            <h3 class="p-3">Shopping Cart</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item cartItem">
+                    <div class="row">
+                        <div class="col-2">
+                            <div style="height: 50px; overflow: hidden;">
+                                <img src="./images/p2.jpeg" style="width: 100%;" alt="">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <span class="name">0</span>
+                            <div class="details"></div>
+                        </div>
+                        <div class="col-6">
+                            <span class="price">0</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="p-3 d-flex justify-content-between">
+                <div>Sub Total</div>
+                <div class="subTotal ml-auto">0</div>
+            </div>
 
+            <div class="p-3">
+                <h4>Checkout Details</h4>
+                <h5>Delivery Details</h5>
+                <Select class="form-control" id="deliveryZones">
+                    <option value="">Pick up</option>
+                </Select>
+            </div>
+
+            <div class="p-3 d-flex justify-content-between">
+                <strong>Total Price</strong>
+                <strong id="totalPrice">Total Price</strong>
+                <div>
+                    <button disabled type="button" class="btn btn-sm btn-primary checkoutBtn">Checkout</button>
+                </div>
+            </div>
+
+        </div>
         
 <div class="textbox">
     <h1>ALLENTANTE PIZZERIA</h1>
     <p>A slice is never enough! Welcome to <strong>Allentante pizzeria </strong>tantalizing experience where our sumptuous pizzas leave your taste buds craving for more!</p>
-    <button>Make your order</button>
+    <button> One is never enough!!!</button>
 
 
        

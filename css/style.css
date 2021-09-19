@@ -60,3 +60,8 @@ color: #fff;
        background: transparent;
        cursor: pointer;
    }
+   #shoppingCart{
+    position:absolute;
+    z-index: 1;
+    display: none;
+}

@@ -68,3 +68,61 @@ const zones = [
     new zone("Zone B", 200),
     new zone("Zone C", 250)
 ]
+
+function populateDropdowns(sizeElement, items, valueFiled, textField, extraField){
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let extras = extraField ? '('+item[extraField]+')' : '';
+        let value = valueFiled ? item[valueFiled] : item;
+        let text = textField ? item[textField] : item;
+        sizeElement.append(`<option value="` + value + `">` + text + extras+`</option>`);
+    }
+}
+
+function updateUI(){
+    $('#cartItems').html(cart.cartItems.length);
+    if(selectedPizza){
+        let pizzaPrice = 0;
+        if(selectedPizza.price){
+            pizzaPrice += selectedPizza.price;
+            $('#addToCartBtn').removeAttr('disabled');
+        }
+        else{
+            $('#addToCartBtn').attr('disabled', true);
+        }
+        if(selectedPizza.crust) pizzaPrice += selectedPizza.crust.price;
+        if(selectedPizza.topping) pizzaPrice += selectedPizza.topping.reduce((a, b)=>a+b.price, 0);
+                
+        $('#pizzaPrice').html(pizzaPrice);
+
+    }
+    function populateDropdowns(sizeElement, items, valueFiled, textField, extraField){
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            let extras = extraField ? '('+item[extraField]+')' : '';
+            let value = valueFiled ? item[valueFiled] : item;
+            let text = textField ? item[textField] : item;
+            sizeElement.append(`<option value="` + value + `">` + text + extras+`</option>`);
+        }
+    }
+    
+    function updateUI(){
+        $('#cartItems').html(cart.cartItems.length);
+        if(selectedPizza){
+            let pizzaPrice = 0;
+            if(selectedPizza.price){
+                pizzaPrice += selectedPizza.price;
+                $('#addToCartBtn').removeAttr('disabled');
+            }
+            else{
+                $('#addToCartBtn').attr('disabled', true);
+            }
+            if(selectedPizza.crust) pizzaPrice += selectedPizza.crust.price;
+            if(selectedPizza.topping) pizzaPrice += selectedPizza.topping.reduce((a, b)=>a+b.price, 0);
+                    
+            $('#pizzaPrice').html(pizzaPrice);
+    
+        }
+    
+}
+}

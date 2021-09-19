@@ -254,6 +254,16 @@ function updateUI(){
         updateUI();
     });
     /* end of Populate crust */
+
+    /* Populate delivery zones */
+    populateDropdowns($('select#deliveryZones'), zones, 'zoneName', 'zoneName', 'price');
+    $('select#deliveryZones').on("change", function(){
+        cart.delivery = zones.find(z=>z.zoneName == $(this).val());
+        // console.log(cart.delivery);
+        updateUI();
+    });
+    /* End of populate delivery zones */
+
 }
 }
 

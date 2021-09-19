@@ -197,7 +197,7 @@ function updateUI(){
       });
   });
   /* end of Populating pizza list */
-  
+
    /* Populate sizes */
    populateDropdowns($('select#size'), pizzaSizes);
    $('select#size').on('change', function(){
@@ -208,6 +208,19 @@ function updateUI(){
        updateUI()
    });
    /* end of Populate sizes */
+
+   /* Populate Toppings */
+
+    for(let i=0; i<topingsList.length; i++){
+        let topping = topingsList[i];
+        $('#toppings').append(`<div class="form-check">
+        <input class="form-check-input" type="checkbox" value="`+topping.name+`" id="flexCheckDefault`+i+`">
+        <label class="form-check-label" for="flexCheckDefault`+i+`">
+          `+topping.name+`
+        </label>
+      </div>`);
+        
+    }
 }
 }
 

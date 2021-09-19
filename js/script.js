@@ -50,3 +50,21 @@ const pizzaListing = [
     new pizzaTypes("Chicken Tikka", "p3.jpeg", "This is Chicken Tikka")
     
 ];
+const crustList = [
+    new crusts("Crispy", 150),
+    new crusts("stuffed", 250),
+    new crusts("Glutten free", 200)
+];
+
+const topingsList = [
+    new toppings("Bacon", 120),
+    new toppings("Chicken", 150),
+    new toppings("Extra cheese", 200)
+
+];
+
+const zones = [
+    new zone("Zone A", 150),
+    new zone("Zone B", 200),
+    new zone("Zone C", 250)
+]

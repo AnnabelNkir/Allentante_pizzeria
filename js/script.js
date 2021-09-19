@@ -33,3 +33,20 @@ function Cart(){
         $("#cartItems").html(cartItems.length);
     }
 }
+function zone(zoneName, price){
+    this.zoneName = zoneName;
+    this.price = price;
+}
+
+let cart = new Cart();
+let selectedPizza;
+let cartItemHtml;
+
+const pizzaListing = [
+    new pizzaTypes("BBQ Chicken",
+        "p1.jpeg",
+        "This is BBQ Chicken pizza"),
+    new pizzaTypes("Peperoni", "p2.jpeg", "This is Peperoni"),
+    new pizzaTypes("Chicken Tikka", "p3.jpeg", "This is Chicken Tikka")
+    
+];

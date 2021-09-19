@@ -197,6 +197,17 @@ function updateUI(){
       });
   });
   /* end of Populating pizza list */
+  
+   /* Populate sizes */
+   populateDropdowns($('select#size'), pizzaSizes);
+   $('select#size').on('change', function(){
+       const size =$(this).val();
+       if(selectedPizza){
+           selectedPizza.price = selectedPizza.prices[size];
+       }
+       updateUI()
+   });
+   /* end of Populate sizes */
 }
 }
 

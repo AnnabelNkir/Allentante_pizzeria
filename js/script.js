@@ -123,6 +123,16 @@ function updateUI(){
             $('#pizzaPrice').html(pizzaPrice);
     
         }
-    
+        let subTotalPrice = 0;
+        let totalPrice = 0;
+        $('#shoppingCart ul.list-group').html('');
+        for(let i=0; i<cart.cartItems.length; i++){
+            const item = cart.cartItems[i];
+            const crustPrice = item.crust ? item.crust.price : 0;
+            let toppingPrice = 0;
+            if(item.topping.length > 0){
+                toppingPrice = item.topping.reduce((a, b)=>a+b.price, 0);
+            }
+        }
 }
 }

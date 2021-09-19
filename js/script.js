@@ -221,6 +221,39 @@ function updateUI(){
       </div>`);
         
     }
+
+    $('#toppings .form-check-input').on('change', function(){
+        const isCheck = this.checked;
+        
+        const selectedToppingValue = $(this).val();
+        let topping = topingsList.find(function(topping){
+            if(topping.name == selectedToppingValue) return true;
+            else return false;
+        });
+        const indexOfSelectedTopping = selectedPizza.topping.findIndex(function(toppingItem){ 
+            return toppingItem.name == topping.name;
+         });
+
+        if(indexOfSelectedTopping == -1 && isCheck) selectedPizza.topping.push(topping);
+        else if(indexOfSelectedTopping > -1 && !isCheck){
+            selectedPizza.topping.splice(indexOfSelectedTopping, 1);
+        }
+        updateUI()
+    });
+    /* end of Populate sizes */
+
+    /* Populate crust */
+    populateDropdowns($('select#crust'), crustList, 'name', 'name', 'price');
+    $('select#crust').on('change', function(){
+        const selectedCrustValue = $(this).val();
+        let crust = crustList.find(function(crust){
+            if(crust.name == selectedCrustValue) return true;
+            else return false;
+        });
+        selectedPizza.crust = crust;
+        updateUI();
+    });
+    /* end of Populate crust */
 }
 }
 

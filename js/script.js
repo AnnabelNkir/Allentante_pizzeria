@@ -133,6 +133,20 @@ function updateUI(){
             if(item.topping.length > 0){
                 toppingPrice = item.topping.reduce((a, b)=>a+b.price, 0);
             }
+             // const toppingPrice = item.topping ? item.topping.price : 0;
+        subTotalPrice += item.price + crustPrice + toppingPrice;
+
+        $('#shoppingCart ul.list-group').append(cartItemHtml);        
+        $('#shoppingCart ul.list-group li:last img').attr('src', './images/'+item.image);
+        $('#shoppingCart ul.list-group li:last span.name').html(item.name);
+        $('#shoppingCart ul.list-group li:last span.price').html(item.price);
+        if(item.crust) 
+            $('#shoppingCart ul.list-group li:last div.details')
+            .append("Crust:"+item.crust.name)
+
+        if(item.topping) $('#shoppingCart ul.list-group li:last div.details')
+            .append(" Topping:"+item.topping.map(topping=>topping.name).join(','));
+        
+    }
+}
         }
-}
-}

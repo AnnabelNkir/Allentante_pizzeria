@@ -264,6 +264,18 @@ function updateUI(){
     });
     /* End of populate delivery zones */
 
+    /* add to cart action */
+    const addToCartBtn = $('#addToCartBtn');
+    addToCartBtn.click(function(){        
+        cart.addToCart(selectedPizza);
+        alert(selectedPizza.name +' has been added to cart');
+        updateUI();
+    });
+
+    $('#shoppingCartBtn').on('click', function(){
+        $('#shoppingCart').toggle();
+    });
+
 }
 }
 

@@ -267,7 +267,7 @@ $(document).ready(function () {
     const addToCartBtn = $('#addToCartBtn');
     addToCartBtn.click(function(){        
         cart.addToCart(selectedPizza);
-        alert(selectedPizza.name +' has been added to cart,click on the shopping cart above to proceed to choose a delivery or pick-up option');
+        alert(selectedPizza.name +' has been added to cart,click on the red pizza cart button above to proceed to choose a delivery or pick-up option');
         updateUI();
     });
 
@@ -279,6 +279,6 @@ $(document).ready(function () {
         alert('Thank you for placing an order with Allentante Pizzeria, Your order will be delivered to your location.');
         cart = new Cart();
         updateUI();
-    });
 
+});
 });

@@ -18,25 +18,57 @@ crossorigin="anonymous"></script>
 
     
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><strong>Allentante Pizzeria</strong></div>a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light static-top sticky">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo2.jpeg" alt="" width="40" height="40">
+        <h5 class="brand-name"> Allentante Pizzeria</h5>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#our-menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
       <!-- End of navbar -->
 
-       
+       <!-- jumbotron -->
+  <div class="jumbotron jumbo-bg">
+    <div class="jumbotron-text">
+      <h1 class="text-white c-head align-center heading">Welcome to Allentante Pizzeria</h1>
+      <p class="text-white c-par align-center heading"> <em> A slice is never enough! <br>We pride ourselves in giving you a tantalizing experience that leaves your tastebuds craving for more!</em></p>
+    </div>
+  </div>
+  <!-- end of jumbotron -->
 
+  <!-- menu header -->
+  <div class="container">
+    <h2 class="align-center" id="our-menu"> <strong>Lets take a tour to view our menu and indulge our tastebuds!</strong></h2>
+    <hr class="style-one">
+  </div>
+  <!-- end of menu header -->
     <div class="container">
 
         <div class="p-3">
             <button type="button" class="btn" id="shoppingCartBtn">
-                <span>Shopping Cart</span>
+                <span>Pizza Cart</span>
                 <span class="badge bg-secondary" id="cartItems">0</span>
             </button>
             <span class="badge bg-warning text-light subTotal">0</span>
@@ -52,7 +84,7 @@ crossorigin="anonymous"></script>
                     <div class="row">
                         <div class="col-2">
                             <div style="height: 50px; overflow: hidden;">
-                                <img src="images/pizza8.jpeg" style="width: 100%;" alt="">
+                                <img src="images/p1.jpeg" style="width: 100%;" alt="">
                             </div>
                         </div>
                         <div class="col-4">
@@ -95,9 +127,10 @@ crossorigin="anonymous"></script>
 
 
         <!-- beginning of the offcanvas -->
+
         <div class="offcanvas offcanvas-end" tabindex="-1" id="pizzaCustomazation" aria-labelledby="pizzaNameDiv">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="pizzaNameDiv">Offcanvas bottom</h5>
+                <h5 class="offcanvas-title" id="pizzaNameDiv">Order Allentante Pizza
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
@@ -106,14 +139,7 @@ crossorigin="anonymous"></script>
                 <div class="pizzaImage">
                     <img src="./images/pizza1.jpeg" alt="" width="100%">
                 </div>
-                <div class="modal-body">
-                    <form id="pizza-one-form">
-                      <label>
-                        Quantity:
-                        <input type="number" class="form-control" id="pizza-quantity" min="1" required>
-                      </label>
-                      <br>
-                      <label>
+                
 
                 <div class="form-group mb-3">
                     <label for="size">Size</label>
@@ -133,10 +159,14 @@ crossorigin="anonymous"></script>
                     <div id="toppings">
 
                     </div>
-                    <!-- <label for="toppings">Toppings</label>
-                    <select name="toppings" id="toppings" class="form-control" id="">
-                        <option value="">Select Toppings</option>
-                    </select> -->
+                    <div class="modal-body">
+                        <form id="pizza-one-form">
+                          <label>
+                            Quantity:
+                            <input type="number" class="form-control" id="pizza-quantity" min="1" required>
+                          </label>
+                          <br>
+                          <label>
                 </div>
 
                 <div class="form-group d-flex justify-content-between">
@@ -152,7 +182,22 @@ crossorigin="anonymous"></script>
         </div>
         <!-- end of the offcanvas -->
     </div>
+   <section>
+  <!-- about us -->
+  <div class="jumbotron about" id="about-us">
+    <h1 class="text-white us align-center heading">About Us</h1>
+  </div>
+  <div class="container">
+    <p class="align-center text-white"> Allentante Pizzeria is your pizza indulgence plug at the click of the order button. We are located at CBD Moi Avenue, Nairobi. Order your favorite pizza and we will deliver at the click of a button at the comfort of your couch. We accept orders online for pickup and also do deliveries.Over the years we have mastered and perfected our signature pizza experience and this has accorded us various awards in the industry.</p>
+    <hr class="style-one">
+  </div>
 
+</section>
+  <!-- end of about us -->
+
+  <section>
+      
+  </section>
   <script src="./js/script.js"></script>
 </body>
 </html>

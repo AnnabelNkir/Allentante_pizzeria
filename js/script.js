@@ -10,7 +10,7 @@ function pizzaTypes(name, image, description) {
     this.prices = {
         "Large": 1200,
         "Medium": 900,
-        "Small": 600
+        "Small": 600,
     }
 }
 pizzaTypes.prototype.price = 0;

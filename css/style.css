@@ -48,6 +48,13 @@ body{
 /* navbar styling */
 .navbar {
     color: grey;
+    width: 100%;
+    margin: auto;
+    padding-top: 25px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 .nav-link{
@@ -58,10 +65,15 @@ body{
 .brand-name{
   font-family: 'Pattaya', sans-serif;
   color: #000;
+  width: 150px;
 }
 
 .navbar-brand{
   display: flex;
+  margin-right: 570px;
+  
+
+ 
   
 }
 
@@ -90,10 +102,7 @@ hr.style-one {
     border: 0;
     height: 1px;
     background: white;
-    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
-    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
-    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+   
   }
   
   .c-head{
@@ -114,32 +123,7 @@ hr.style-one {
 color: whitesmoke;
 font-size: 25px;
 font-weight: 300;
-}
-.textbox{
-width: 60%;
-margin: 200px auto 0;
-color: #fff;
-   }
-   .textbox h1{
-       margin-bottom: 30px;
-       font-size: 60px;
-   }
-   .textbox p{
-       font-size: 18px;
-       line-height: 24px;
-       margin-bottom: 40px;
-   }
-   .textbox button{
-       width: 220px;
-       padding: 12px 0;
-       color: #fff;
-       font-size: 20px;
-       border-radius: 5px;
-       outline: none;
-       border: 2px solid #fff;
-       background: transparent;
-       cursor: pointer;
-   }
+} 
    #shoppingCart{
     position:absolute;
     z-index: 1;
@@ -152,10 +136,56 @@ color: #fff;
     color: white;
     border-style: solid;
     border-radius: 5px;
+    background-color: rgb(231, 20, 20);
 
 }
 #checkoutBtn{
     color: yellow;
     border: solid;
     border-radius: 5px;
+ 
 }
+#about-us{
+margin-top: 80px;
+margin-bottom: 40px;
+}
+
+    
+  
+  .input{
+    display: inline;
+  
+   
+  }
+  
+  
+  #form input{
+    width:35%;
+    background-color: transparent;
+  
+  }
+  #name{
+    margin-left: 10%;
+    color :white;
+    
+  }
+  #email{
+    margin-left:10%;
+    color: white;
+    
+  }
+  #form textarea{
+    background-color: transparent;
+    color: white;
+   
+  }
+  #email::placeholder{
+    color: white;
+  }
+  
+  #name::placeholder{
+    color: white;
+  }
+  textarea::placeholder{
+    color: white;
+  }

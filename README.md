@@ -1,5 +1,5 @@
 # Allentante_pizzeria
-A web application where your customers order different sizes of sumptuous pizzas with one or more toppings. 
+A web application where your customers order different sizes and types of sumptuous pizzas with one or more toppings and can choose the option of getting their pizza delivered at the comfort of their couch. 
 
 #### By **{Annabel Nkirote Micheni}** **{September 20, 2021}**
 ## Specifications

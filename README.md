@@ -6,7 +6,7 @@ A web application where your customers order different sizes of sumptuous pizzas
 
 For one to be able to access the Allentante Pizzeria web application, the user should install the latest version of browser of choice and load the live link provided and navigate through the application. 
 
-<a href="https://annabelnkir.github.io/Allentante_pizzeria/">Live link to the Delani studio landing page</a>
+<a href="https://annabelnkir.github.io/Allentante_pizzeria/">Live link to Allentante Pizzeria web application</a>
 
 
 ## Setup/Installation Requirements
@@ -52,7 +52,7 @@ I used HTML for structure,Bootstrap and CSS for styling and j-query and Javascri
 ## Support and contact details
 Incase of any query, need for collaboration or issues with this code, feel free to reach me at annabel.micheni@student.moringaschool or nkiroteannabel@gmail.com.
 
-### <a href="https://annabelnkir.github.io/Allentante_pizzeria/">Delani studio landing page live link</a>
+### <a href="https://annabelnkir.github.io/Allentante_pizzeria/">Allentante Pizzeria web application live link</a>
 
 ### MIT License
 ```
